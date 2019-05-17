@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
     <title>Home</title>
-</head> -->
-
-<?php
-    require "_head.php";
-?>
+</head>
 
 <body>
     <!-- Have button appear after load is completed -->
