@@ -1,0 +1,57 @@
+@media screen and (min-width: 64rem) {
+    #home_container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-items: center;
+    }
+
+    #banner, #banner_img {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    #banner_cap {
+        top: 25rem;
+    }
+
+    .burger {
+        color: #0DDFCd;
+    }
+
+    /* #index_item, #index_img {
+        width: 18rem;
+    } */
+
+    #load_screen {
+        background-image: url(../img/food.jpg);
+        background-position-x: -30rem;
+        background-position-y: -7rem;
+        height: 100vh;
+        width: 100vw;
+        z-index: 50;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100rem;
+    }
+
+    #absolute_logo {
+        width: 8rem;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+    .steps h5 {
+        grid-column: 1 / 3;
+        margin-bottom: .8rem;
+    }
+
+}

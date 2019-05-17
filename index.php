@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/eua2quq.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master_tablet.css">
+    <link rel="stylesheet" href="css/master_tablet.css">
     <title>Home</title>
 </head>
 
@@ -53,18 +55,18 @@
                 <h1>TEST RECIPE</h1>
             </figcaption>
         </figure>
-        <img class="hearts" id="banner_heart" src="img/fav_white.png" alt="banner_favorite">
+        <!-- <img class="hearts" id="banner_heart" src="img/fav_white.png" alt="banner_favorite"> -->
     </header>
 
     <main>
-       <h3>Featured Recipes</h3>
+       <h3 id="featured">Featured Recipes</h3>
        <div id="home_container">
             <!--375px X 322px (32,32,32,32)-->
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
                <!-- 35px X 35px  -->
-               <img class="hearts" src="img/fav_white.png" alt="favorite">
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
                <!--350px X 94px (0,0,32,32)-->
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
@@ -75,7 +77,7 @@
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
                <!-- 35px X 35px  -->
-               <img class="hearts" src="img/fav_white.png" alt="favorite">
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
                <!--350px X 94px (0,0,32,32)-->
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
@@ -86,7 +88,7 @@
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
                <!-- 35px X 35px  -->
-               <img class="hearts" src="img/fav_white.png" alt="favorite">
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
                <!--350px X 94px (0,0,32,32)-->
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
@@ -99,13 +101,12 @@
            ?>
 
        </div>
+       <footer>
+       <a id="back-to-top" href="#top">Back to Top</a>
+           <!--375px X 45px (17,17,0,0)-->
+           <!-- copyright and such -->
+       </footer>
     </main>
-
-    <footer>
-    <a id="back-to-top" href="#top">Back to Top</a>
-        <!--375px X 45px (17,17,0,0)-->
-        <!-- copyright and such -->
-    </footer>
 </body>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>

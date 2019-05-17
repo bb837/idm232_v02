@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master_tablet.css">
+    <link rel="stylesheet" href="css/master_tablet.css">
     <title>Search</title>
-</head> -->
-
-<?php
-    require "_head.php";
-?>
+</head>
 
 <div id="menu" class="overlay">
             <button id="closebtn" class="closebtn">&times;</button>
@@ -27,6 +25,10 @@
               <a href="help-screen.php">Help Screen</a>
             </div>
     </div>
+
+<div id="filter-window">
+    
+</div>
 
 <body id="top">
     <header id="search_header">
@@ -55,10 +57,9 @@
         </button>
 
         <div id="search_wrap">
+            <object id="filter_img" data="img/filter.svg" type="image/svg+xml"></object>
             <form id="search_form">
-                <!-- ADD SEARCH ICON -->
                 <input type="search" placeholder="What are you hungry for?">
-                <object id="filter_img" data="img/filter.svg" type="image/svg+xml"></object>
             </form>
             
         </div>
@@ -67,24 +68,16 @@
 </header>
 
 <main id="search_main">
-    <div id="filter_container">
-        <!-- slide down menu -->
-        <div id="filter-content">
-            <h2 id="filter_header">Filters:</h2>
-            <div id="filter_drop"></div>
-            <img id="arrow" src="img/arrow.svg" alt="down arrow">
-            <!-- <button>filter drop</button> -->
-        </div>
+        <div id="filter_container">
+            
 
-         <!-- 375px X 200px  -->
+        </div>
         <div id="search_result">
         <div id="search_container">
             <!--375px X 322px (32,32,32,32)-->
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!-- 35px X 35px  -->
-               <img class="hearts" src="img/fav_white.png" alt="favorite">
                <!--350px X 94px (0,0,32,32)-->
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
@@ -95,8 +88,6 @@
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!-- 35px X 35px  -->
-               <img class="hearts" src="img/fav_white.png" alt="favorite">
                <!--350px X 94px (0,0,32,32)-->
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>

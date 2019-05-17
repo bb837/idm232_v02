@@ -161,7 +161,7 @@ body {
     clear: both;
     display: block;
     height: .25rem;
-    margin-bottom: .4rem;
+    margin: .3rem auto;
     width: 2rem;
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
   }
@@ -296,6 +296,12 @@ img {
     top: 1rem;
 }
 
+
+
+
+
+
+
 /*     SEARCH SPECS       */
 
 #search_header {
@@ -308,23 +314,20 @@ img {
 
 
 #search_wrap {
-    position: absolute;
+    position: relative;
     bottom: .005rem;
     padding: 1rem;
 }
 
-/* #search_form {
-    
-    width: 80%;
-} */
-
 input {
+    position: absolute;
+    left: 3.5rem;
     outline: none;
     margin: 0 auto;
 	background: #fff url(#) no-repeat .5625rem center;
 	border: none;
-	padding: .4rem 1rem .4rem .5rem;
-	width: 12rem;
+	padding: .4rem .75rem .4rem .5rem;
+	width: 13rem;
 	border-radius: 10em;
 	
 	transition: all .5s;
@@ -339,16 +342,18 @@ input::placeholder {
 }
 
 input:focus, input:active {
-	width: 100%;
+	/* width: 100%; */
 	background-color: #fff;
 	border-color: #fff;
     box-shadow: 0 0 .625rem rgba(255,255,255,.5);
-    padding: .4rem 3rem .4rem 2.2rem;
+    padding: .4rem 3.6rem .4rem 2.2rem;
 }
 
 #filter_img {
     width: 2rem;
     height: auto;
+    position: absolute;
+    top: 1rem;
 }
 
 #search_help {
@@ -370,7 +375,7 @@ input:focus, input:active {
     visibility: hidden;
 }
 
-#filter_container {
+/* #filter_container {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
@@ -378,7 +383,7 @@ input:focus, input:active {
     z-index: 60;
     height: 10vh;
     margin-bottom: 1rem; 
-}
+} */
 
 #search_main {
     padding: 0;
@@ -401,13 +406,12 @@ input:focus, input:active {
     padding: .4rem;
 }
 
-#arrow {
-    width: 1.5rem;
-    margin: 0 auto;
-    padding: .5rem .5rem;
-    display: block;
-    transform: rotate(0);
-}
+
+
+
+
+
+
 
 /* footer */
 
@@ -420,6 +424,14 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+
+
+
+
+
+
+
 
 /* index */
 
@@ -444,7 +456,7 @@ footer {
 }
 
 #banner_cap {
-    position: absolute;
+    position: relative;
     top: 13rem;
     left: 1.5rem;
     width: 16.5625rem;
@@ -455,6 +467,10 @@ footer {
     position: absolute;
     top: 17rem;
     right: 1.3rem;
+}
+
+#featured {
+    margin-left: 1rem;
 }
 
 .index_item {
@@ -484,16 +500,23 @@ body {
 
 main {
     margin: 0 auto 3rem;
-    padding: 0 0.75rem;
 }
 
 #back-to-top {
     position: relative;
     top: .8rem;
-    margin: 2rem;
+    padding: 2rem;
     text-decoration: none;
     color: white;
 }
+
+
+
+
+
+
+
+
 
 /* HELP SCREEN */
 
@@ -524,132 +547,4 @@ main {
     color: white;
     border: none;
     background: none;
-}
-
-
-/*        TABLET          */
-
-@media screen and (min-width: 48rem) {
-    /* Index SPECS */
-
-    #hamburger {
-        right: .75rem;
-        top: 1rem;
-        /* z-index: 50; */
-    }
-
-    #home_container {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
-
-    #banner, #banner_img {
-        width: 80vw;
-        height: 50vh;
-        margin: auto;
-    }
-
-    #banner_cap {
-        top: 25rem;
-        left: 10rem;
-    }
-
-    #banner_heart {
-        position: absolute;
-        top: 28rem;
-        right: 1.5rem;
-    }
-
-    .burger {
-        width: 2.5rem;
-    }
-
-        /* Search SPECS */
-    
-    #search_container {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-     }
-     
-    input:focus, input:active {
-        padding: .4rem 15rem .4rem 2.2rem;
-    }
-
-     /* Recipe SPECS */
-
-     #recipe_container {
-         width: 75%;
-     }
-
-     .recipe_img {
-        width: 70%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    #recipe_des {
-        width: 80%;
-        margin: .5rem auto;
-    }
-
-}
-
-@media screen and (min-width: 79.9375rem) {
-    #home_container {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        justify-items: center;
-    }
-
-    #banner, #banner_img {
-        width: 80vw;
-        height: 50vh;
-    }
-
-    #banner_cap {
-        top: 25rem;
-    }
-
-    .burger {
-        color: #0DDFCd;
-    }
-
-    /* #index_item, #index_img {
-        width: 18rem;
-    } */
-
-    #load_screen {
-        background-image: url(../img/food.jpg);
-        /* background-position-x: -30rem;
-        background-position-y: -7rem; */
-        height: 100vh;
-        width: 100vw;
-        z-index: 50;
-        visibility: visible;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        /* background-repeat: no-repeat;
-        background-size: 100rem; */
-    }
-
-    #absolute_logo {
-        width: 8rem;
-        position: absolute;
-        left: 1rem;
-    }
-
-    .steps {
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-    }
-
-    .steps h5 {
-        grid-column: 1 / 3;
-        margin-bottom: .8rem;
-    }
-
 }

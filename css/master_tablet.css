@@ -1,0 +1,86 @@
+/*        TABLET          */
+
+@media screen and (min-width: 48rem) {
+    /* LOAD SCREEN */
+
+
+    /* Index SPECS */
+    #hamburger {
+        right: .75rem;
+        top: 1rem;
+        background-color: #0DDFCd;
+        border-radius: 2rem;
+        padding: 1rem 1rem;
+        position: fixed;
+        /* z-index: 50; */
+    }
+
+    main {
+        margin: 1rem auto;
+    }
+
+    .burger {
+        width: 1.95rem;
+    }
+
+    #banner, #banner_img {
+        width: 93vw;
+        height: 50vh;
+        margin: auto;
+        position: relative;
+    }
+
+    #home_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+
+
+    #banner_cap {
+        top: -8rem;
+    }
+
+    #banner_heart {
+        position: absolute;
+        top: 28rem;
+        right: 1.5rem;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Search SPECS */
+    
+    #search_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+     }
+     
+    input:focus, input:active {
+        padding: .4rem 15rem .4rem 2.2rem;
+    }
+
+     /* Recipe SPECS */
+
+     #recipe_container {
+         width: 75%;
+     }
+
+     .recipe_img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #recipe_des {
+        width: 80%;
+        margin: .5rem auto;
+    }
+}
