@@ -1,0 +1,646 @@
+/* h1: Futura Bold 20pt. #707070
+h2: Futura Book 18pt. #707070
+h3: Futura Heavy 24pt. #707070
+h4: Futura Bold 22pt. #707070 & #0DDFCd
+h5: Futura Demi 16pt. #707070
+h6: Futura Light 18pt. #707070
+p, ul, ol, li: Futura Bold 20pt. #707070 */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    color: #707070;
+}
+
+/*       TEXT        */
+h1 {
+    color: #f5f5f5;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.25rem;
+    margin: 0;
+    padding-bottom: .2rem;
+}
+
+h2 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    font-size: 1.25rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+}
+
+h4 {
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.375rem;
+    margin: .7rem auto; 
+}
+
+h5 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    margin: .3rem auto; 
+}
+
+h6 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    font-size: 1.125rem;
+    padding: .5rem;
+}
+
+p, ul, ol, li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0625rem;
+    margin: .3rem auto; 
+}
+
+button {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    font-size: 1.4375rem;
+}
+
+body {
+    background-color: #f5f5f5;
+    max-width: 60rem;
+}
+
+/* load screen */
+
+#wordmark_logo {
+    width: 13.125rem;
+    top: .5rem;
+    margin-left: 1rem;
+}
+
+#logo {
+    width: 13.125rem;
+    top: 13rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* position the image */
+#load_screen {
+    background-image: url(../img/food.jpg);
+    background-position-x: -30rem;
+    background-position-y: -7rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100rem;
+}
+
+#get_started {
+    background-color: #0DDFCd;
+    color: #fff;
+    border-radius: 1.75rem;
+    font-size: 1.125rem;
+	padding: .75rem 1.25rem;
+    border: none;
+    position: relative;
+    bottom: -23rem;
+    margin: 0 auto;
+}
+
+/* menu */
+
+#hamburger {
+    position: absolute;
+    background: none;
+    border: none;
+    right: .5rem;
+    top: .9rem;
+    z-index: 30;
+}
+
+#search_icon {
+    width: 1.25rem;
+}
+
+.burger {
+    background-color: #fff;
+    border-radius: .125rem;
+    clear: both;
+    display: block;
+    height: .25rem;
+    margin-bottom: .4rem;
+    width: 2rem;
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
+  }
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed; 
+    z-index: 40;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+.overlay-content {
+    position: relative;
+    width: 20rem;
+    /* background-color: white; */
+    border-radius: 1.25rem;
+    height: auto;
+    margin: auto auto;
+    top: 2rem;
+  }
+  
+.overlay a {
+    padding: .5rem;
+    text-decoration: none;
+    color: #0DDFCd;
+    display: block;
+    transition: 0.3s;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    /* padding: 3rem 1rem; */
+  }
+
+  
+.overlay .closebtn {
+    background: none;
+    border: none;
+    position: absolute;
+    /* Have the font not be bold */
+    font: bold 3rem 'futura', sans-serif;
+    color: #fff;
+    top: -0.25rem;
+    right: .75rem;
+    padding: 0;
+  }
+
+/*   Contents    */
+.hearts {
+    width: 2.0625rem;
+    height: 2.0625rem;
+    /* animation: favorite_white .2s  */
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background-color: none;
+}
+
+/*    RECIPE SPECS     */
+
+#recipe_container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* #recipe_img {
+    width: 91%;
+    height: 17.3125rem;
+    border-radius: 1.25rem;
+} */
+
+.recipe_img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#recipe_des {
+    width: 100%;
+}
+
+#recipe_header {
+    height: 4rem;
+    position: relative;
+    background-color: #0DDFCd;
+    border-radius: 0 0 1.0625rem 1.0625rem;
+}
+
+#ingredients, #kitchen_tools, #step_container, #tips {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+}
+
+img {
+    border-radius: 1.25rem;
+    height: auto;
+}
+
+.h4_blue {
+    color: #0DDFCd;
+}
+
+#recipe_heart {
+    position: absolute;
+    right: -9.5rem;
+    top: 2rem;
+    width: 2.0625rem;
+    height: 2.0625rem;
+}
+
+#recipe_info {
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+#absolute-logo {
+    width: 8rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+/*     SEARCH SPECS       */
+
+#search_header {
+    height: 7.5rem;
+    position: relative;
+    background-color: #0DDFCd;
+    border-radius: 0 0 1.0625rem 1.0625rem;
+}
+
+
+
+#search_wrap {
+    position: absolute;
+    bottom: .005rem;
+    padding: 1rem;
+}
+
+/* #search_form {
+    
+    width: 80%;
+} */
+
+input {
+    outline: none;
+    margin: 0 auto;
+	background: #fff url(#) no-repeat .5625rem center;
+	border: none;
+	padding: .4rem 1rem .4rem .5rem;
+	width: 12rem;
+	border-radius: 10em;
+	
+	transition: all .5s;
+}
+
+input::placeholder {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0625rem;
+    opacity: .3;
+}
+
+input:focus, input:active {
+	width: 100%;
+	background-color: #fff;
+	border-color: #fff;
+    box-shadow: 0 0 .625rem rgba(255,255,255,.5);
+    padding: .4rem 3rem .4rem 2.2rem;
+}
+
+#filter_img {
+    width: 2rem;
+    height: auto;
+}
+
+#search_help {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    top: 10rem;
+    visibility: hidden;
+    z-index: 10;
+}
+
+#no_result {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 10rem;
+    visibility: hidden;
+}
+
+#filter_container {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
+    border-radius: 0 0 1.0625rem 1.0625rem;
+    z-index: 60;
+    height: 10vh;
+    margin-bottom: 1rem; 
+}
+
+#search_main {
+    padding: 0;
+}
+
+#filter-content {
+    padding:  0 1.625rem;
+}
+
+#search_container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+#filter_header {
+    margin: 0;
+    padding: .4rem;
+}
+
+#arrow {
+    width: 1.5rem;
+    margin: 0 auto;
+    padding: .5rem .5rem;
+    display: block;
+    transform: rotate(0);
+}
+
+/* footer */
+
+footer {
+    background-color: #0DDFCd;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    height: 2.8125rem;
+    margin-top: 2rem;
+    position: fixed;
+    bottom: 0;
+}
+
+/* index */
+
+#home_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* z-index: 30; */
+}
+
+#banner {
+    width: 100vw;
+    height: 20.125rem;
+    border-radius: 0 0 1.0625rem 1.0625rem;
+    margin-bottom: 2rem; 
+}
+
+#banner_img {
+    position: relative;
+    border-radius: 0 0 2rem 2rem;
+    width: 100vw;
+}
+
+#banner_cap {
+    position: absolute;
+    top: 13rem;
+    left: 1.5rem;
+    width: 16.5625rem;
+    height: 6.25rem;
+}
+
+#banner_heart {
+    position: absolute;
+    top: 17rem;
+    right: 1.3rem;
+}
+
+.index_item {
+    height: 18.875rem;
+    width: 21.875rem;
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
+    border-radius: 2rem 2rem 2rem 2rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.index_img {
+    border-radius: 2rem 2rem 0 0;
+    height: 13rem;
+    margin: 0 auto;
+}
+
+.item_cap {
+    /* border-radius: 0 0 2rem 2rem; */
+    height: 5.9375rem;
+    padding: 0 1rem .5rem;
+}
+
+body {
+    margin: 0 auto;
+}
+
+main {
+    margin: 0 auto 3rem;
+    padding: 0 0.75rem;
+}
+
+#back-to-top {
+    position: relative;
+    top: .8rem;
+    margin: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* HELP SCREEN */
+
+.card {
+    position: relative;
+    width: 20rem;
+    background-color: white;
+    border-radius: 1.25rem;
+    height: 65vh;
+    margin: auto auto;
+    top: 2rem;
+    text-align: center
+}
+
+#help {
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s; 
+}
+
+#skip {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    font-size: 1.125rem;
+    padding: .5rem;
+    color: white;
+    border: none;
+    background: none;
+}
+
+
+/*        TABLET          */
+
+@media screen and (min-width: 48rem) {
+    /* Index SPECS */
+
+    #hamburger {
+        right: .75rem;
+        top: 1rem;
+        /* z-index: 50; */
+    }
+
+    #home_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+
+    #banner, #banner_img {
+        width: 80vw;
+        height: 50vh;
+        margin: auto;
+    }
+
+    #banner_cap {
+        top: 25rem;
+        left: 10rem;
+    }
+
+    #banner_heart {
+        position: absolute;
+        top: 28rem;
+        right: 1.5rem;
+    }
+
+    .burger {
+        width: 2.5rem;
+    }
+
+        /* Search SPECS */
+    
+    #search_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+     }
+     
+    input:focus, input:active {
+        padding: .4rem 15rem .4rem 2.2rem;
+    }
+
+     /* Recipe SPECS */
+
+     #recipe_container {
+         width: 75%;
+     }
+
+     .recipe_img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #recipe_des {
+        width: 80%;
+        margin: .5rem auto;
+    }
+
+}
+
+@media screen and (min-width: 79.9375rem) {
+    #home_container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-items: center;
+    }
+
+    #banner, #banner_img {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    #banner_cap {
+        top: 25rem;
+    }
+
+    .burger {
+        color: #0DDFCd;
+    }
+
+    /* #index_item, #index_img {
+        width: 18rem;
+    } */
+
+    #load_screen {
+        background-image: url(../img/food.jpg);
+        /* background-position-x: -30rem;
+        background-position-y: -7rem; */
+        height: 100vh;
+        width: 100vw;
+        z-index: 50;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        /* background-repeat: no-repeat;
+        background-size: 100rem; */
+    }
+
+    #absolute_logo {
+        width: 8rem;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+    .steps h5 {
+        grid-column: 1 / 3;
+        margin-bottom: .8rem;
+    }
+
+}
