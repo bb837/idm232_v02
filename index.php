@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/master_tablet.css">
-    <link rel="stylesheet" href="css/master_tablet.css">
+    <link rel="stylesheet" href="css/master_desktop.css">
     <title>Home</title>
 </head>
 
@@ -32,16 +32,15 @@
             </div>
             <div class="overlay-content">
                 <a href="index.php">Home</a>
-              <a href="#">Your Favorites</a>
               <a href="search.php">Search</a>
               <a href="recipe.php">Recipe Template</a>
-              <a href="help-screen.php">Help Screen</a>
+              <!-- <a href="help-screen.php">Help Screen</a> -->
             </div>
     </div>
 
     <header id="top">
         <!-- <button id="search_icon"><img src="img/search_icon.png" alt="search"></button> -->
-        <button id="hamburger">
+        <button id="hamburger" class="header_hamburger">
             <span class="burger"></span>
             <span class="burger"></span>
             <span class="burger"></span>
@@ -101,12 +100,12 @@
            ?>
 
        </div>
-       <footer>
-       <a id="back-to-top" href="#top">Back to Top</a>
-           <!--375px X 45px (17,17,0,0)-->
-           <!-- copyright and such -->
-       </footer>
     </main>
+           <footer>
+           <a id="back-to-top" href="#top">Back to Top</a>
+               <!--375px X 45px (17,17,0,0)-->
+               <!-- copyright and such -->
+           </footer>
 </body>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>

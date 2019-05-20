@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.typekit.net/eua2quq.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/master_tablet.css">
@@ -19,10 +20,9 @@
             </div>
             <div class="overlay-content">
                 <a href="index.php">Home</a>
-              <a href="#">Your Favorites</a>
               <a href="search.php">Search</a>
               <a href="recipe.php">Recipe Template</a>
-              <a href="help-screen.php">Help Screen</a>
+              <!-- <a href="help-screen.php">Help Screen</a> -->
             </div>
     </div>
 
@@ -32,23 +32,25 @@
 
 <body id="top">
     <header id="search_header">
-        <a href="index.php">
-            <svg id="wordmark_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211 43">
-                <defs>
-                    <style>
-                    .cls-1 {
-                        fill: #f5f5f5;
-                        font-size: 29px;
-                        font-family: Beauty and the Dutch;
-                        letter-spacing: 0.093em;
-                    }
-                    </style>
-                </defs>
-                <g id="Symbol_1_1" data-name="Symbol 1 – 1" transform="translate(-8 -8)">
-                    <text id="Let_s_Cook_" data-name="Let&apos;s Cook!" class="cls-1" transform="translate(8 8)"><tspan x="0" y="31">Let&apos;s Cook!</tspan></text>
-                </g>
-            </svg>
-        </a>
+        <div id="wordmark_logo">
+            <a href="index.php">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211 43">
+                    <defs>
+                        <style>
+                        .cls-1 {
+                            fill: #f5f5f5;
+                            font-size: 29px;
+                            font-family: Beauty and the Dutch;
+                            letter-spacing: 0.093em;
+                        }
+                        </style>
+                    </defs>
+                    <g id="Symbol_1_1" data-name="Symbol 1 – 1" transform="translate(-8 -8)">
+                        <text id="Let_s_Cook_" data-name="Let&apos;s Cook!" class="cls-1" transform="translate(8 8)"><tspan x="0" y="31">Let&apos;s Cook!</tspan></text>
+                    </g>
+                </svg>
+            </a>
+            </div>
 
         <button id="hamburger">
             <span class="burger"></span>
@@ -57,7 +59,9 @@
         </button>
 
         <div id="search_wrap">
-            <object id="filter_img" data="img/filter.svg" type="image/svg+xml"></object>
+            <button id="filter_img">
+                <img  src="img/filter.png" alt="filter">
+            </button>
             <form id="search_form">
                 <input type="search" placeholder="What are you hungry for?">
             </form>
@@ -69,7 +73,50 @@
 
 <main id="search_main">
         <div id="filter_container">
-            
+        <div id="filters">
+        <div class="hidden" id="filter_drop">
+
+            <section class="filter_type">
+                <h5 class="filter_heading">Cuisine</h5>
+                <ul class="filter_list">
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Asian</a></li>
+                    <li><a href="#">Hispanic</a></li>
+                    <li><a href="#">Italian</a></li>
+                </ul>
+            </section> 
+
+          <section class="filter_type">
+                <h5 class="filter_heading">Key Ingredient</h5>
+                <ul class="filter_list">
+                    <li><a href="#">Beef</a></li>
+                    <li><a href="#">Chicken</a></li>
+                    <li><a href="#">Fish</a></li>
+                    <li><a href="#">Pasta</a></li>
+                    <li><a href="#">Pork</a></li>
+                    <li><a href="#">Vegetables</a></li>
+                </ul>
+          </section>
+
+          <section class="filter_type">
+                <h5 class="filter_heading">Servings</h5>
+                <ul class="filter_list">
+                    <li><a href="#">2 Servings</a></li>
+                    <li><a href="#">4 Servings</a></li>
+                </ul>
+          </section>
+
+          <section class="filter_type">
+                <h5 class="filter_heading">Cook Time</h5>
+                <ul class="filter_list">
+                    <li><a href="#">20 Minutes</a></li>
+                    <li><a href="#">30 Minutes</a></li>
+                    <li><a href="#">45 Minutes</a></li>
+                    <li><a href="#">1 Hour</a></li>
+                </ul>
+          </section>
+        </div>
+      </div>
 
         </div>
         <div id="search_result">

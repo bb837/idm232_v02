@@ -2,17 +2,16 @@
 
 @media screen and (min-width: 48rem) {
     /* LOAD SCREEN */
-
+#load_screen {
+    background-position-y: 0;
+    background-size: cover;
+}
 
     /* Index SPECS */
-    #hamburger {
-        right: .75rem;
-        top: 1rem;
-        background-color: #0DDFCd;
-        border-radius: 2rem;
-        padding: 1rem 1rem;
-        position: fixed;
-        /* z-index: 50; */
+
+
+    .header_hamburger {
+        right: 2rem !important;  
     }
 
     main {
@@ -46,14 +45,6 @@
         top: 28rem;
         right: 1.5rem;
     }
-
-    
-    
-    
-    
-    
-    
-    
     
     /* Search SPECS */
     
@@ -67,7 +58,21 @@
         padding: .4rem 15rem .4rem 2.2rem;
     }
 
-     /* Recipe SPECS */
+    input:focus, input:active {
+        width: 55%;
+        /* background-color: #fff;
+        border-color: #fff;
+        box-shadow: 0 0 .625rem rgba(255,255,255,.5);
+        padding: .4rem 3.6rem .4rem 2.2rem; */
+    }
+
+    #wordmark_logo {
+        width: 13.125rem;
+        top: 1rem;
+        margin-left: 1rem;
+    }
+
+    /* Recipe SPECS */
 
      #recipe_container {
          width: 75%;

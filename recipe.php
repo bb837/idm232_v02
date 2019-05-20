@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/eua2quq.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master_tablet.css">
+    <link rel="stylesheet" href="css/master_desktop.css">
     <title>Recipe Template</title>
 </head>
 
@@ -15,10 +17,8 @@
             <button id="closebtn" class="closebtn">&times;</button>
             <div class="overlay-content">
                 <a href="index.php">Home</a>
-              <a href="#">Your Favorites</a>
               <a href="search.php">Search</a>
               <a href="recipe.php">Recipe Template</a>
-              <a href="help-screen.php">Help Screen</a>
             </div>
     </div>
 
@@ -36,7 +36,7 @@
 
     </header>
 
-    <main>
+    <main id="top">
         <!-- <img id="recipe_heart" src="img/fav_pink.png" alt="pink_favorite"> -->
         <div id="recipe_container">
 
@@ -87,7 +87,7 @@
             <!-- DYNAMICALLY ADD STEPS (INCLUDE) -->
             <div id="step_container">
                 <!-- 6 steps max -->
-                <h4>Let's Cook!</h4>
+                <h4 class="h4_blue">Let's Cook!</h4>
                 <!-- (20,20,20,20) TBD -->
                 <div class="steps">
                         <h5>Step 1</h5>
@@ -107,10 +107,10 @@
         </div>
         
     </main>
-    <footer>
-        <!-- back to top, like button, send, -->
-        <!-- are you an admin -->
-    </footer>
+            <footer>
+            <a id="back-to-top" href="#top">Back to Top</a>
+                <!-- back to top? -->
+            </footer>
 
 </body>
 
