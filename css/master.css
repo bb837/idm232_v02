@@ -41,7 +41,7 @@ h2 {
     font-style: normal;
     font-size: 1.25rem;
     margin-top: .5rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 h3 {
@@ -491,17 +491,17 @@ footer {
 }
 
 .index_item {
-    height: 18.875rem;
     width: 21.875rem;
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
     border-radius: 2rem 2rem 2rem 2rem;
     position: relative;
     margin-bottom: 1.5rem;
+    overflow-x: hidden;
 }
 
 .index_img {
     border-radius: 2rem 2rem 0 0;
-    height: 13rem;
+    height: 21.875rem;
     margin: 0 auto;
 }
 
