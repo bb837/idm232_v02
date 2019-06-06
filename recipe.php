@@ -163,6 +163,6 @@
 </html>
 <?php
   } // end while
-  myqli_free_result($result);
-  require "includes/_footer.php";
+  mysqli_free_result($result);
+
 ?>

@@ -13,6 +13,7 @@
     $random_id = randomNumber(1, 40, 18);
 
     $bannerImg = rand(1, 40);
+    print_r($bannerImg);
 
     while($recipe = mysqli_fetch_assoc($result)) {
     ?>
@@ -109,4 +110,5 @@
 
 <?php
     }
+    myqli_free_result($result);
 ?>
