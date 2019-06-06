@@ -1,21 +1,7 @@
 <?php
     require_once "includes/_db.php";
-    require_once "includes/functions.php";
-
-    $query = "SELECT id, title, side, hero_image ";
-    $query .= "FROM recipes ";
-    $query .= "ORDER by id ASC";
-    $result = mysqli_query($connection, $query);
-    if (!$result) {
-      die("Database connection failed.");
-    }
-
-    $random_id = randomNumber(1, 40, 18);
-
-    $bannerImg = rand(1, 40);
-
-    while($recipe = mysqli_fetch_assoc($result)) {
-    ?>
+    require_once "includes/functions.php"
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,14 +19,15 @@
 
 <body>
     <!-- Have button appear after load is completed -->
-     <!-- <div id="load_screen">
+     <div id="load_screen">
+        <!-- <img id="load_img" src="img/food.jpg" alt="food"> -->
 
         <object id="logo" data="img/logo.svg" type="image/svg+xml">
         <img  src="img/logo.svg" alt="Let's Cook!">
         </object>
 
         <button id="get_started">Let's Get Started</button>
-    </div> -->
+    </div>
 
     <div id="menu" class="overlay">
             <button id="closebtn" class="closebtn">&times;</button>
@@ -64,35 +51,57 @@
             <span class="burger"></span>
         </button>
 
-
-        <?php
-
-        if ($bannerImg = $recipe["id"]) {
-            ?>
         <figure id="banner">
             <!--375px X 322px (0,0,17,17)-->
-            <img 
-
-            src="images/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
-
-            id="banner_img" alt="placeholder_banner">
+            <img id="banner_img" src="https://via.placeholder.com/375x322" alt="placeholder_banner">
             <figcaption id="banner_cap">
                 <h1>Try Today!</h1>
-                <h1><?php echo $recipe["title"] . " with " . $recipe["side"]?></h1>
+                <h1>TEST RECIPE</h1>
             </figcaption>
         </figure>
-        <?php
-            }
-         ?>
         <!-- <img class="hearts" id="banner_heart" src="img/fav_white.png" alt="banner_favorite"> -->
     </header>
 
     <main>
        <h3 id="featured">Featured Recipes</h3>
        <div id="home_container">
+            <!--375px X 322px (32,32,32,32)-->
+           <figure class="index_item">
+               <!--350px X 208px-->
+               <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
+               <!-- 35px X 35px  -->
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
+               <!--350px X 94px (0,0,32,32)-->
+                <figcaption class="item_cap">
+                        <h2>TEST RECIPE</h2>
+                        <p>TEST DESCRIPTION</p>
+                    </figcaption>
+           </figure>
+           <figure class="index_item">
+               <!--350px X 208px-->
+               <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
+               <!-- 35px X 35px  -->
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
+               <!--350px X 94px (0,0,32,32)-->
+                <figcaption class="item_cap">
+                        <h2>TEST RECIPE</h2>
+                        <p>TEST DESCRIPTION</p>
+                    </figcaption>
+           </figure>
+           <figure class="index_item">
+               <!--350px X 208px-->
+               <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
+               <!-- 35px X 35px  -->
+               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
+               <!--350px X 94px (0,0,32,32)-->
+                <figcaption class="item_cap">
+                        <h2>TEST RECIPE</h2>
+                        <p>TEST DESCRIPTION</p>
+                    </figcaption>
+           </figure>
 
            <?php
-            include "includes/index_item.php";
+            include "index_item.php";
            ?>
 
        </div>
@@ -106,7 +115,3 @@
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>
 </html>
-
-<?php
-    }
-?>
