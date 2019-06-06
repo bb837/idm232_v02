@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- Have button appear after load is completed -->
+
      <div id="load_screen">
         <!-- <img id="load_img" src="img/food.jpg" alt="food"> -->
 
@@ -59,7 +59,7 @@
                 <h1>TEST RECIPE</h1>
             </figcaption>
         </figure>
-        <!-- <img class="hearts" id="banner_heart" src="img/fav_white.png" alt="banner_favorite"> -->
+
     </header>
 
     <main>
@@ -69,9 +69,7 @@
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!-- 35px X 35px  -->
-               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
-               <!--350px X 94px (0,0,32,32)-->
+
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
                         <p>TEST DESCRIPTION</p>
@@ -80,9 +78,7 @@
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!-- 35px X 35px  -->
-               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
-               <!--350px X 94px (0,0,32,32)-->
+
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
                         <p>TEST DESCRIPTION</p>
@@ -91,9 +87,7 @@
            <figure class="index_item">
                <!--350px X 208px-->
                <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!-- 35px X 35px  -->
-               <!-- <img class="hearts" src="img/fav_white.png" alt="favorite"> -->
-               <!--350px X 94px (0,0,32,32)-->
+
                 <figcaption class="item_cap">
                         <h2>TEST RECIPE</h2>
                         <p>TEST DESCRIPTION</p>

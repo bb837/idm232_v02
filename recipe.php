@@ -46,7 +46,7 @@
         <div id="recipe_container">
 
             <div id="recipe_info">
-                <h3>Lorem Ipsum</h3>
+                <h3><?php $recipe ?></h3>
                 <h6>Recipe Info Here</h6>
                 <!-- 341px X 277px (20,20,20,20) -->
                 <img class="recipe_img" src="https://via.placeholder.com/375x322" alt="placeholder">
