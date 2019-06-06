@@ -2,11 +2,10 @@
  while($recipe = mysqli_fetch_assoc($result)) {
     if (in_array($recipe["id"], $random_id)) {
         ?>
-<a href="<?php 
+<a class="link" href="<?php 
               $rec_url = rawurldecode("recipe.php");
               $rec_url .= "?" . "id=" . urldecode($recipe["id"]);
-              echo htmlspecialchars($rec_url);
-            ?>">
+              echo htmlspecialchars($rec_url);?>">
 <figure class="index_item">
 
     <img 

@@ -1,6 +1,23 @@
 <?php
     require_once "includes/_db.php";
-    require_once "includes/functions.php"
+    require_once "includes/functions.php";
+
+    $id = isset($_GET["id"]) ? $_GET["id"] : null;
+  
+    if (!$id) {
+      redirect_to("index.php");
+    } else {
+      $query = 'SELECT * ';
+      $query .= 'FROM recipes ';
+      $query .= "WHERE id = '{$id}' ";
+      $query .= 'LIMIT 1';
+      $result = mysqli_query($connection, $query);
+      if (!$result) {
+        die('Database query failed.');
+      }
+    }
+  
+    while ($recipe = mysqli_fetch_assoc($result)) {
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +34,6 @@
     <title>Recipe Template</title>
 </head>
 
-
 <div id="menu" class="overlay">
             <button id="closebtn" class="closebtn">&times;</button>
             <div class="overlay-content">
@@ -29,7 +45,6 @@
 
 <body>
     <header id="recipe_header">
-            <!-- 103px X 103px  -->
 
         <img id="absolute-logo" src="img/logo.svg" alt="Let's Cook!">
 
@@ -42,61 +57,86 @@
     </header>
 
     <main id="top">
-        <!-- <img id="recipe_heart" src="img/fav_pink.png" alt="pink_favorite"> -->
+
         <div id="recipe_container">
 
             <div id="recipe_info">
                 <h3><?php echo $recipe["title"] ?></h3>
                 <h6><?php echo $recipe["side"] ?></h6>
-                <!-- 341px X 277px (20,20,20,20) -->
-                <img class="recipe_img" src="https://via.placeholder.com/375x322" alt="placeholder">
+
+                <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["hero_image"] ?>" alt="placeholder">
                 <p id="recipe_des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+                <?php echo $recipe["description"] ?>
                 </p>
             </div>
 
             <div id="ingredients">
                 <h4 class="h4_blue">Ingredients</h4>
-                <!-- 269px X 184px (0,0,0,0) TBD -->
-                <img class="recipe_img" src="https://via.placeholder.com/269x184" alt="placeholder">
-                <!-- futura Medium pt.18 line height 25-->
+
+                <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="placeholder">
+
+
                 <h6 id="ing_list">
-                2 Lorem ipsum <br>
-                1/3 dolor sit amet <br>
-                4 consectetur <br>
-                2 1/2 adipiscing <br>
-</h6>
+                    <ul>
+                <?php
+              $ings = explode(";", $recipe["ingredients"]);
+              foreach ($ings as $ing) {
+                ?>
+                  <li><?php echo $ing ?></li> 
+                <?php
+              }
+            ?>
+                </ul>
+            </h6>
+
             </div>
 
-            <div id="tips">
-                <h4 class="h4_blue">Tips!</h4>
-                <img class="recipe_img" src="https://via.placeholder.com/269x269" alt="placeholder">
-                <h2>Name of the Tip</h2>
-                <p id="tool_des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </div>
-
-            <!-- Make a GRID -->
             <div id="kitchen_tools">
                 <h4 class="h4_blue">Kitchen Tools</h4>
-                <!-- 134px X 134px (20,20,20,20) TBD -->
-                <img class="recipe_img" src="https://via.placeholder.com/180x180" alt="placeholder">
-                <img src="" alt="">
-                <h2>Name of Kitchen Tool</h2>
+
+                <img class="recipe_img" src="images/kitchen_tools/<?php echo $recipe["tool_img"] ?>" alt="placeholder">
+
+                <h2><?php echo $recipe["kitchen_tool"] ?></h2>
                 <p id="tool_des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <?php echo $recipe["kitchen_tool_desc"] ?>
                 </p>
             </div>
 
-            <!-- DYNAMICALLY ADD STEPS (INCLUDE) -->
             <div id="step_container">
-                <!-- 6 steps max -->
+
                 <h4 class="h4_blue">Let's Cook!</h4>
-                <!-- (20,20,20,20) TBD -->
-                <div class="steps">
+
+                <?php 
+              $steps = explode("]\[", $recipe["steps"]);
+              $step_img_high = explode("\\", $recipe["step_img_high"]);
+
+              $i = 0;
+              while ($i < count($steps)) {
+                $step = $steps[$i];
+                  $first_letter = substr($step, 0, 1);
+                  $last_letter = substr($step, -1);
+                  if ($first_letter = "[") {
+                    $step = ltrim($step, '[');
+                  }
+                  if ($last_letter = "]") {
+                    $step = rtrim($step, ']');
+                  }
+                  $step_exp = explode("|", $step);
+                ?>
+                  <div class="steps">
+                    <h5><?php echo $step_exp[0] ?></h5>
+                    <img src="images/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="" class="recipe_img">
+                    <p class="step_pg"><?php echo $step_exp[1] ?></p>
+                </div>
+                <?php
+                $i++;
+              }
+            ?>
+
+                <!-- <div class="steps">
                         <h5>Step 1</h5>
-                    <img class="recipe_img" src="https://via.placeholder.com/250x250" alt="">
+                    <img class="recipe_img" src="" alt="">
                     <p id="step_pg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -107,7 +147,7 @@
                     <p id="step_pg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
         
@@ -121,3 +161,8 @@
 
 <script src="js/navigation.js"></script>
 </html>
+<?php
+  } // end while
+  myqli_free_result($result);
+  require "includes/_footer.php";
+?>

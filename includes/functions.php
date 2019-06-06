@@ -5,4 +5,10 @@ function redirect_to($location = NULL) {
     exit;
   }
 }
+
+function randomNumber($min, $max, $quantity) {
+  $numbers = range($min, $max);
+  shuffle($numbers);
+  return array_slice($numbers, 0, $quantity);
+}
 ?>
