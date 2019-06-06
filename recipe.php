@@ -46,8 +46,8 @@
         <div id="recipe_container">
 
             <div id="recipe_info">
-                <h3><?php $recipe ?></h3>
-                <h6>Recipe Info Here</h6>
+                <h3><?php echo $recipe["title"] ?></h3>
+                <h6><?php echo $recipe["side"] ?></h6>
                 <!-- 341px X 277px (20,20,20,20) -->
                 <img class="recipe_img" src="https://via.placeholder.com/375x322" alt="placeholder">
                 <p id="recipe_des">
