@@ -98,11 +98,9 @@
 
        </div>
     </main>
-           <footer>
+           <!-- <footer>
            <a id="back-to-top" href="#top">Back to Top</a>
-               <!--375px X 45px (17,17,0,0)-->
-               <!-- copyright and such -->
-           </footer>
+           </footer> -->
 </body>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>

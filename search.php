@@ -1,7 +1,8 @@
 <?php
     require_once "includes/_db.php";
-    require_once "includes/functions.php"
+    require_once "includes/functions.php";
     require_once "includes/menu-include.php";
+    require_once "includes/_footer.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
     <title>Search</title>
 </head>
 
-<div id="menu" class="overlay">
+<!-- <div id="menu" class="overlay">
             <button id="closebtn" class="closebtn">&times;</button>
             <div id="user_info">
                 <img src="" alt="">
@@ -28,9 +29,8 @@
                 <a href="index.php">Home</a>
               <a href="search.php">Search</a>
               <a href="recipe.php">Recipe Template</a>
-              <!-- <a href="help-screen.php">Help Screen</a> -->
             </div>
-    </div>
+    </div> -->
 
 <div id="filter-window">
     
@@ -155,11 +155,10 @@
         <!-- <h2 id="search_help">Search for a recipe, special ingredient or cuisine!</h2> -->
         <!-- <h2 id="no_result">Sorry! Nothing seems to match the search.</h2> -->
     </main> 
-        <footer>
+        <!-- <footer>
         <a id="back-to-top" href="#top">Back to Top</a>
-            <!-- back to top? -->
         </footer>
-        
+         -->
 </body>
 
 <script src="js/navigation.js"></script>

@@ -2,6 +2,7 @@
     require_once "includes/_db.php";
     require_once "includes/functions.php";
     require_once "includes/menu-include.php";
+    require_once "includes/_head.php";
 
     $id = isset($_GET["id"]) ? $_GET["id"] : null;
   
@@ -45,7 +46,7 @@
     </div>
 
 <body>
-    <header id="recipe_header">
+    <!-- <header id="recipe_header">
 
         <img id="absolute-logo" src="img/logo.svg" alt="Let's Cook!">
 
@@ -54,8 +55,7 @@
             <span class="burger"></span>
             <span class="burger"></span>
             </button>
-
-    </header>
+    </header> -->
 
     <main id="top">
 

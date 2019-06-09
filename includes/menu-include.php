@@ -7,6 +7,7 @@
             <div class="overlay-content">
                 <a href="index.php">Home</a>
               <a href="search.php">Search</a>
+              <a href="all_recipes.php">All Recipes</a>
               <a href="recipe.php">Recipe Template</a>
             </div>
     </div>
