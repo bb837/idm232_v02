@@ -1,8 +1,6 @@
 <?php
     require_once "includes/_db.php";
     require_once "includes/functions.php";
-    require_once "includes/menu-include.php";
-    require_once "includes/_footer.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,18 +17,9 @@
     <title>Search</title>
 </head>
 
-<!-- <div id="menu" class="overlay">
-            <button id="closebtn" class="closebtn">&times;</button>
-            <div id="user_info">
-                <img src="" alt="">
-                <h2 id="welcome"></h2>
-            </div>
-            <div class="overlay-content">
-                <a href="index.php">Home</a>
-              <a href="search.php">Search</a>
-              <a href="recipe.php">Recipe Template</a>
-            </div>
-    </div> -->
+<?php
+    require_once "includes/menu-include.php";
+?>
 
 <div id="filter-window">
     
@@ -159,6 +148,10 @@
         <a id="back-to-top" href="#top">Back to Top</a>
         </footer>
          -->
+
+    <?php
+        require_once "includes/_footer.php";
+    ?>
 </body>
 
 <script src="js/navigation.js"></script>

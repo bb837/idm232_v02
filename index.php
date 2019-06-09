@@ -85,7 +85,7 @@
         <?php
             }
          ?>
-        <!-- <img class="hearts" id="banner_heart" src="img/fav_white.png" alt="banner_favorite"> -->
+
     </header>
 
     <main>
@@ -98,9 +98,9 @@
 
        </div>
     </main>
-           <!-- <footer>
-           <a id="back-to-top" href="#top">Back to Top</a>
-           </footer> -->
+    <?php
+require_once "includes/_footer.php";
+  ?> 
 </body>
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>
