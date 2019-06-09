@@ -1,6 +1,7 @@
 <?php
     require_once "includes/_db.php";
     require_once "includes/functions.php";
+    require_once "includes/menu-include.php";
 
     $id = isset($_GET["id"]) ? $_GET["id"] : null;
   

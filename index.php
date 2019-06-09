@@ -1,6 +1,7 @@
 <?php
     require_once "includes/_db.php";
     require_once "includes/functions.php";
+    require_once "includes/menu-include.php";
 
     $query = "SELECT id, title, side, hero_image ";
     $query .= "FROM recipes ";
@@ -43,7 +44,7 @@
         <button id="get_started">Let's Get Started</button>
     </div> -->
 
-    <div id="menu" class="overlay">
+    <!-- <div id="menu" class="overlay">
             <button id="closebtn" class="closebtn">&times;</button>
             <div id="user_info">
                 <img src="" alt="">
@@ -53,9 +54,8 @@
                 <a href="index.php">Home</a>
               <a href="search.php">Search</a>
               <a href="recipe.php">Recipe Template</a>
-              <!-- <a href="help-screen.php">Help Screen</a> -->
             </div>
-    </div>
+    </div> -->
 
     <header id="top">
         <!-- <button id="search_icon"><img src="img/search_icon.png" alt="search"></button> -->
@@ -110,5 +110,5 @@
 
 <?php
     }
-    myqli_free_result($result);
+    mysqli_free_result($result);
 ?>
