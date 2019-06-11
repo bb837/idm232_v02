@@ -6,7 +6,7 @@
 
     <img 
     
-    src="images/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
+    src="images/<?php echo $recipe["id"]?>/thumb_lg.jpg" 
     alt="<?php echo $recipe["title"] ?>"
     
     class="index_img">

@@ -519,7 +519,7 @@ footer {
 }
 
 .index_item {
-    width: 21.875rem;
+    width: 19.375rem;
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
     border-radius: 2rem 2rem 2rem 2rem;
     position: relative;
@@ -529,7 +529,7 @@ footer {
 
 .index_img {
     border-radius: 2rem 2rem 0 0;
-    height: 21.875rem;
+    height: 19.375rem;
     margin: 0 auto;
 }
 
