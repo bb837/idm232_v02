@@ -1,7 +1,3 @@
-<?php
- while($recipe = mysqli_fetch_assoc($result)) {
-    if (in_array($recipe["id"], $random_id)) {
-        ?>
 <a class="link" href="<?php 
               $rec_url = rawurldecode("recipe.php");
               $rec_url .= "?" . "id=" . urldecode($recipe["id"]);
@@ -21,8 +17,3 @@
         </figcaption>
 </figure>
 </a>
-<?php
-    }
- }
- ?>
-

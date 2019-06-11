@@ -1,6 +1,8 @@
 <?php
     require_once "includes/_db.php";
     require_once "includes/functions.php";
+
+    $search_result = isset($_GET["search"]) ? $_GET["search"] : null;
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +59,9 @@
             <button id="filter_img">
                 <img  src="img/filter.png" alt="filter">
             </button>
-            <form id="search_form">
-                <input type="search" placeholder="What are you hungry for?">
+            <form id="search_form" action="search.php?go">
+                <input type="search" name="search" placeholder="What are you hungry for?">
+                <input type="submit" id="submit" value="">
             </form>
             
         </div>
@@ -114,28 +117,44 @@
       </div>
 
         </div>
-        <div id="search_result">
+        <div id="search_result_container">
         <div id="search_container">
-            <!--375px X 322px (32,32,32,32)-->
-           <figure class="index_item">
-               <!--350px X 208px-->
-               <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!--350px X 94px (0,0,32,32)-->
-                <figcaption class="item_cap">
-                        <h2>TEST RECIPE</h2>
-                        <p>TEST DESCRIPTION</p>
-                    </figcaption>
-           </figure>
 
-           <figure class="index_item">
-               <!--350px X 208px-->
-               <img class="index_img" src="https://via.placeholder.com/350x208" alt="placeholder">
-               <!--350px X 94px (0,0,32,32)-->
-                <figcaption class="item_cap">
-                        <h2>TEST RECIPE</h2>
-                        <p>TEST DESCRIPTION</p>
-                    </figcaption>
-           </figure>
+           <?php 
+           $search_result_orig = $search_result;
+           $search_result = mysqli_real_escape_string($connection, $search_result); 
+
+           if ($search_result !== null) {
+            $query = "SELECT * ";
+            $query .= "FROM recipes ";
+            $query .= "WHERE title LIKE '%{$search_result}%' ";
+            $query .= "OR side LIKE '%{$search_result}%' ";
+            $query .= "OR description LIKE '%{$search_result}%' ";
+            $query .= "OR ingredients LIKE '%{$search_result}%' ";
+            $query .= "OR steps LIKE '%{$search_result}%' ";
+            $query .= "OR tags LIKE '%{$search_result}%' ";
+            // $query .= ")";
+          }
+
+          $result = mysqli_query($connection, $query);
+
+          if (!$result) {
+            die("Database connection failed.");
+          }
+          elseif (mysqli_num_rows($result) == 0) {
+              ?>
+            <h2 id="no_result">Sorry! Nothing seems to match the search.</h2>;
+            <?php
+          }
+          else {
+        //   elseif (mysqli_num_rows($result) >= 1) {
+            while($recipe = mysqli_fetch_assoc($result)) {
+              include "includes/index_item.php";
+            } // End while loop
+          }
+
+          ?>
+
        </div> 
         </div>
      
@@ -143,11 +162,7 @@
 
         <!-- <h2 id="search_help">Search for a recipe, special ingredient or cuisine!</h2> -->
         <!-- <h2 id="no_result">Sorry! Nothing seems to match the search.</h2> -->
-    </main> 
-        <!-- <footer>
-        <a id="back-to-top" href="#top">Back to Top</a>
-        </footer>
-         -->
+    </main>
 
     <?php
         require_once "includes/_footer.php";

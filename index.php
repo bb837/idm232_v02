@@ -93,7 +93,7 @@
        <div id="home_container">
 
            <?php
-            include "includes/index_item.php";
+            include "includes/index_item_random.php";
            ?>
 
        </div>

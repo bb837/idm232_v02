@@ -161,6 +161,16 @@ body {
     width: 1.25rem;
 }
 
+#submit {
+    right: -11rem;
+    background: url("../img/search.png");
+    background-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0;
+    padding: 0;
+}
+
 .burger {
     background-color: #fff;
     border-radius: .125rem;
