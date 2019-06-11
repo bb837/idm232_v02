@@ -63,7 +63,7 @@
 
             <div id="recipe_info">
                 <h3><?php echo $recipe["title"] ?></h3>
-                <h6><?php echo $recipe["side"] ?></h6>
+                <h6>with <?php echo $recipe["side"] ?></h6>
 
                 <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["hero_image"] ?>" alt="placeholder">
                 <p id="recipe_des">
@@ -134,21 +134,6 @@
                 $i++;
               }
             ?>
-
-                <!-- <div class="steps">
-                        <h5>Step 1</h5>
-                    <img class="recipe_img" src="" alt="">
-                    <p id="step_pg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <div class="steps">
-                        <h5>Step 2</h5>
-                    <img class="recipe_img" src="https://via.placeholder.com/250x250" alt="">
-                    <p id="step_pg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div> -->
             </div>
         </div>
         

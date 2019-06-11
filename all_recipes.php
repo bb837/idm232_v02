@@ -18,7 +18,7 @@
     // $bannerImg = rand(1, 40);
     // print_r($bannerImg);
 
-    while($recipe = mysqli_fetch_assoc($result)) {
+
     ?>
 
 <!DOCTYPE html>
@@ -39,8 +39,15 @@
     <h1 id="all-recipes-title">All Recipes</h1>
   </div>
   <main id="home_container">
+
   <?php
+
+  while($recipe = mysqli_fetch_assoc($result)) {
   include "includes/index_item.php";
+
+  } // end while
+  mysqli_free_result($result);
+
   ?>
 
 </main>
@@ -49,8 +56,3 @@ require_once "includes/_footer.php";
   ?>  
 </body>
 </html>
-<?php
-  } // end while
-  mysqli_free_result($result);
-
-?>

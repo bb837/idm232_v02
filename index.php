@@ -7,14 +7,23 @@
     $query .= "FROM recipes ";
     $query .= "ORDER by id ASC";
     $result = mysqli_query($connection, $query);
-    if (!$result) {
+    // if (!$result) {
+    //   die("Database connection failed.");
+    // }
+    $bannerImg = rand(1, 40);
+
+    $query_banner = "SELECT id, title, side, hero_image ";
+    $query_banner .= "FROM recipes ";
+    $query_banner .= "WHERE id LIKE {$bannerImg}";
+    $result_banner = mysqli_query($connection, $query_banner);
+    if (!$result_banner || !$result) {
       die("Database connection failed.");
     }
 
     $random_id = randomNumber(1, 40, 18);
 
-    $bannerImg = rand(1, 40);
-    print_r($bannerImg);
+
+    // print_r($bannerImg);
 
     while($recipe = mysqli_fetch_assoc($result)) {
     ?>
@@ -68,20 +77,25 @@
 
         <?php
 
-        if ($bannerImg = $recipe["id"]) {
+        while ($banner = mysqli_fetch_assoc($result_banner)) {
             ?>
-        <figure id="banner">
-            <!--375px X 322px (0,0,17,17)-->
-            <img 
+            <a  class="link"href=" <?php
+            $rec_url = rawurldecode("recipe.php");
+              $rec_url .= "?" . "id=" . urldecode($banner["id"]);
+              echo htmlspecialchars($rec_url);?>">
+            
+            <figure id="banner">
 
-            src="images/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
+            <img 
+            src="images/<?php echo $banner["id"] . "/" . $banner["hero_image"] ?>"
 
             id="banner_img" alt="placeholder_banner">
             <figcaption id="banner_cap">
                 <h1>Try Today!</h1>
-                <h1><?php echo $recipe["title"] . " with " . $recipe["side"]?></h1>
+                <h1><?php echo $banner["title"] . " with " . $banner["side"]?></h1>
             </figcaption>
         </figure>
+            </a>
         <?php
             }
          ?>
