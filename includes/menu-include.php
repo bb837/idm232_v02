@@ -1,5 +1,4 @@
 <div id="menu" class="overlay">
-            <button id="closebtn" class="closebtn">&times;</button>
             <div id="user_info">
                 <img src="" alt="">
                 <h2 id="welcome"></h2>

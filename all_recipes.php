@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/master_desktop.css">
     <title>All Recipes</title>
 </head>
-<body id="top">
+<body>
   <div id="work">
     <h1 id="all-recipes-title">All Recipes</h1>
   </div>
@@ -55,4 +55,7 @@
 require_once "includes/_footer.php";
   ?>  
 </body>
+
+<script src="js/navigation.js"></script>
+
 </html>

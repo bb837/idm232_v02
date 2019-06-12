@@ -125,13 +125,14 @@ body {
     background-position-y: -7rem;
     height: 100vh;
     width: 100vw;
-    z-index: 50;
+    z-index: 100;
     visibility: visible;
     display: flex;
     flex-direction: column;
     position: absolute;
     background-repeat: no-repeat;
     background-size: 100rem;
+    top: 0;
 }
 
 #get_started {
@@ -201,7 +202,7 @@ body {
     border-radius: 1.25rem;
     height: auto;
     margin: auto auto;
-    top: 2rem;
+    top: 8rem;
   }
   
 .overlay a {
@@ -219,7 +220,7 @@ body {
   }
 
   
-.overlay .closebtn {
+#closebtn {
     background: none;
     border: none;
     position: absolute;
@@ -229,6 +230,7 @@ body {
     top: .5rem;
     right: 1rem;
     padding: 0;
+    z-index: 80;
   }
 
 /*   Contents    */
@@ -281,6 +283,7 @@ body {
     height: 4rem;
     position: relative;
     background-color: #07d4c3;
+    z-index: 60;
 }
 
 #ingredients, #kitchen_tools, #step_container, #tips {
@@ -348,8 +351,6 @@ img {
     border-radius: 0 0 1.0625rem 1.0625rem;
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
 }
-
-
 
 #search_wrap {
     position: relative;
@@ -453,13 +454,6 @@ input:focus, input:active {
     padding: .4rem;
 }
 
-
-
-
-
-
-
-
 /* footer */
 
 footer {
@@ -471,14 +465,6 @@ footer {
     position: relative;
     bottom: 0;
 }
-
-
-
-
-
-
-
-
 
 /* index */
 
@@ -493,7 +479,7 @@ footer {
     width: 100vw;
     height: 20.125rem;
     border-radius: 2rem 2rem 2rem 2rem;
-    margin-bottom: 2rem; 
+    margin-bottom: 5rem; 
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
 }
 
@@ -501,14 +487,17 @@ footer {
     position: relative;
     border-radius: 0 0 2rem 2rem;
     width: 100vw;
+    height: 23.4375rem;
 }
 
 #banner_cap {
     position: relative;
-    top: 13rem;
+    top: -8rem;
     left: 1.5rem;
-    width: 16.5625rem;
+    width: 17rem;
     height: 6.25rem;
+    z-index: 30;
+    text-shadow: 1px 1px 3px #454A44;
 }
 
 #banner_heart {
@@ -561,13 +550,6 @@ main {
 }
 
 
-
-
-
-
-
-
-
 /* HELP SCREEN */
 
 .card {
@@ -598,9 +580,6 @@ main {
     border: none;
     background: none;
 }
-
-
-
 
 #filters {
     padding: 0;

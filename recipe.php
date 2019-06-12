@@ -33,30 +33,10 @@
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/master_tablet.css">
     <link rel="stylesheet" href="css/master_desktop.css">
-    <title>Recipe Template</title>
+    <title><?php echo $recipe["title"]?></title>
 </head>
 
-<div id="menu" class="overlay">
-            <button id="closebtn" class="closebtn">&times;</button>
-            <div class="overlay-content">
-                <a href="index.php">Home</a>
-              <a href="search.php">Search</a>
-              <a href="recipe.php">Recipe Template</a>
-            </div>
-    </div>
-
 <body>
-    <!-- <header id="recipe_header">
-
-        <img id="absolute-logo" src="img/logo.svg" alt="Let's Cook!">
-
-            <button id="hamburger">
-            <span class="burger"></span>
-            <span class="burger"></span>
-            <span class="burger"></span>
-            </button>
-    </header> -->
-
     <main id="top">
 
         <div id="recipe_container">

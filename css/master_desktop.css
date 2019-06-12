@@ -4,6 +4,8 @@
         max-width: unset;
         display: flex;
         flex-direction: column;
+        /* width: 90rem; */
+
     }
 
     #top {
@@ -15,7 +17,7 @@
     }
 
     footer {
-        width: 70rem;
+        width: 100%;
         align-self: center;
     }
 
@@ -38,6 +40,10 @@
     .index_img {
         height: 21.975rem;
 
+    }
+
+    #search_container {
+        grid-template-columns: 33% 33% 33%;
     }
 
 /* 
@@ -99,7 +105,7 @@
      } 
 
      #recipe_header {
-         width: 70rem;
+         width: 100%;
          align-self: center;
      }
 }
