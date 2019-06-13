@@ -54,11 +54,11 @@
         justify-items: center;
      }
      
-    /* input:focus, input:active {
+    /* #search-bar:focus, #search-bar:active {
         padding: .4rem 15rem .4rem 2.2rem;
     } */
 
-    /* input:focus, input:active {
+    /* #search-bar:focus, #search-bar:active {
         width: 55%;
         background-color: #fff;
         border-color: #fff;
@@ -66,13 +66,13 @@
         padding: .4rem 3.6rem .4rem 2.2rem;
     } */
 
-    input {
+    #search-bar {
         padding: .4rem 26rem .4rem 2.2rem;
     }
 
-    #submit {
+    /* #submit {
         right: -41rem;
-    }
+    } */
 
     #wordmark_logo {
         width: 13.125rem;
@@ -96,13 +96,4 @@
         width: 80%;
         margin: .5rem auto;
     }
-}
-
-#serving_container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-
-.info {
-    border-bottom: .125rem solid #0ddfcd;
 }

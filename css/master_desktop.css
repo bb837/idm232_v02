@@ -59,13 +59,13 @@
         width: 18rem;
     } */
 
-    input {
+    #search-bar {
         padding: .4rem 57.6rem .4rem 2.2rem;
     }
 
-    #submit {
+    /* #submit {
         right: -72rem;
-    }
+    } */
 
     #load_screen {
         background-position-x: 0;
@@ -121,5 +121,9 @@
         width: 80%;
         height: auto;
         margin: 0 auto;
+    }
+
+    #serving-container {
+        width: 50%;
     }
 }

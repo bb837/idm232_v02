@@ -17,8 +17,8 @@ html {
 
 @font-face {
     font-family: 'beauty_and_the_dutchregular';
-    src: url('beauty_and_the_dutch-webfont.woff2') format('woff2'),
-         url('beauty_and_the_dutch-webfont.woff') format('woff');
+    src: url('../fonts/beauty_and_the_dutch-webfont.woff2') format('woff2'),
+         url('../fonts/beauty_and_the_dutch-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -164,13 +164,15 @@ body {
 }
 
 #submit {
-    right: -16rem;
+    right: 1rem;
     background: url("../img/search.png");
     background-size: 2rem;
     height: 2rem;
     width: 2rem;
     border-radius: 0;
     padding: 0;
+    position: absolute;
+    border: none;
 }
 
 .burger {
@@ -353,9 +355,10 @@ img {
     position: relative;
     bottom: .005rem;
     padding: 1rem;
+    z-index: 100;
 }
 
-input {
+#search-bar {
     position: absolute;
     left: 3.5rem;
     outline: none;
@@ -370,7 +373,7 @@ input {
 	transition: all .5s;
 }
 
-input::placeholder {
+#search-bar::placeholder {
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -378,7 +381,7 @@ input::placeholder {
     opacity: .3;
 }
 
-/* input:active {
+/* #search-bar:active {
 	width: 100%;
 	background-color: #fff;
 	border-color: #fff;
@@ -460,7 +463,7 @@ footer {
     width: 100%;
     height: 2.8125rem;
     margin-top: 1.35rem;
-    position: relative;
+    position: fixed;
     bottom: 0;
 }
 
@@ -582,6 +585,9 @@ main {
 #filters {
     padding: 0;
     margin: 0 .5rem;
+    z-index: 100;
+    position: relative;
+    top: 2rem;
   }
   
   #filter_trigger {
@@ -601,10 +607,16 @@ main {
   }
   
   #filter_drop {
-    /* background-color: var(--clr_gray-light); */
+    background-color: #fff;
     /* /! margin-top: -1rem;  */
-    padding: 1rem 0 .25rem;
+    padding: 1rem .5rem .25rem;
+    z-index: 100;
     /* transition:  */
+    position: relative;
+    top: 1.65rem;
+    padding: 1rem 1rem;
+    border-radius: 1.75rem;
+    height: 50vh;
   }
   
   .filter_type {
@@ -612,9 +624,9 @@ main {
 
   }
   
-  .filter_type:last-of-type {
+  /* .filter_type:last-of-type {
     margin-bottom: 0;
-  }
+  } */
   
   .filter_heading {
     text-align: center;
@@ -631,7 +643,7 @@ main {
     justify-content: center;
   }
   
-  .filter_list li {
+  /* .filter_list li {
     margin: .5rem;
     font-size: 1.125rem;
     background-color: #0DDFCd;
@@ -640,7 +652,7 @@ main {
     font-size: 1.125rem;
     padding: .75rem 1.25rem;
     text-align: center;
-  }
+  } */
   
   .filter_list a {
     display: block;
@@ -671,9 +683,74 @@ main {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: .5rem auto 1.4rem;
-    width: 40%;
+    width: 95%;
 }
 
 .info {
     border-bottom: .125rem solid #0ddfcd;
 }
+
+.radio {
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: .25rem;
+    transition: background-color .2s ease-in-out;
+  }
+  
+  .option:hover input~.radio {
+    background-color: lightgray;
+  }
+  
+  .option input:checked~.radio {
+    background-color: #0DDFCd;
+  }
+  
+  .radio::after {
+    content: "";
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+  
+  .option input:checked~.radio::after {
+    display: block;
+    opacity: 1;
+  }
+  
+  .option .radio::after {
+    left: 9px;
+    top: 4px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .option {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: .25rem 0;
+    padding-left: 1.75rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
