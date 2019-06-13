@@ -27,11 +27,6 @@
         justify-items: center;
     }
 
-    #banner, #banner_img {
-        width: 40vw;
-        height: 50vh;
-    }
-
     .index_item {
         width: 21.975rem;
 

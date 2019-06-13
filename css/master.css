@@ -283,9 +283,11 @@ body {
 
 #recipe_header {
     height: 4rem;
-    position: relative;
+    position: fixed;
     background-color: #07d4c3;
     z-index: 60;
+    width: 100vw;
+    top: 0;
 }
 
 #ingredients, #kitchen_tools, #step_container, #tips {
@@ -320,7 +322,7 @@ img {
 }
 
 #absolute-logo {
-    width: 8rem;
+    height: 8rem;
     position: absolute;
     left: 1rem;
     top: .2rem;
@@ -355,7 +357,7 @@ img {
     position: relative;
     bottom: .005rem;
     padding: 1rem;
-    z-index: 100;
+    z-index: 10;
 }
 
 #search-bar {
@@ -465,6 +467,7 @@ footer {
     margin-top: 1.35rem;
     position: fixed;
     bottom: 0;
+    z-index: 30;
 }
 
 /* index */
@@ -477,25 +480,25 @@ footer {
 }
 
 #banner {
-    width: 100vw;
-    height: 20.125rem;
+    width: 23.4375rem;
+    height: 23.4375rem;
     border-radius: 2rem 2rem 2rem 2rem;
-    margin-bottom: 5rem; 
+    margin: 0 auto 3rem; 
     box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
 }
 
 #banner_img {
     position: relative;
     border-radius: 0 0 2rem 2rem;
-    width: 100vw;
     height: 23.4375rem;
+    width: 23.4375rem;
 }
 
 #banner_cap {
     position: relative;
-    top: -8rem;
+    top: -9rem;
     left: 1.5rem;
-    width: 17rem;
+    width: 20rem;
     height: 6.25rem;
     z-index: 30;
     text-shadow: 1px 1px 6px #313431;
@@ -508,7 +511,7 @@ footer {
 }
 
 #featured {
-    margin-left: 1rem;
+    text-align: center;
 }
 
 .index_item {
@@ -601,6 +604,10 @@ main {
     margin-right: .5rem;
    
   }
+
+  #allrecipes_body {
+    padding-top: 2rem;
+  }
   
   #filter_trigger>object {
     height: 2.5rem;
@@ -610,13 +617,14 @@ main {
     background-color: #fff;
     /* /! margin-top: -1rem;  */
     padding: 1rem .5rem .25rem;
-    z-index: 100;
+    /*! z-index: 20; */
     /* transition:  */
     position: relative;
     top: 1.65rem;
     padding: 1rem 1rem;
     border-radius: 1.75rem;
-    height: 50vh;
+    /*! height: 50vh; */
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
   }
   
   .filter_type {
@@ -692,12 +700,12 @@ main {
 
 .radio {
     position: absolute;
-    top: .25rem;
+    /*! top: .25rem; */
     left: 0;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #f5f5f5;
-    border-radius: .25rem;
+    border-radius: 1rem;
     transition: background-color .2s ease-in-out;
   }
   
@@ -723,12 +731,12 @@ main {
   }
   
   .option .radio::after {
-    left: 9px;
-    top: 4px;
-    width: 7px;
-    height: 13px;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 11px;
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 .25rem .25rem 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -745,6 +753,7 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 1.0625rem;
   }
   
   .option input {

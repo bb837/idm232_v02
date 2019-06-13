@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/master_desktop.css">
     <title>All Recipes</title>
 </head>
-<body>
+<body id="allrecipes_body">
   <div id="work">
     <h1 id="all-recipes-title">All Recipes</h1>
   </div>

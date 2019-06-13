@@ -9,13 +9,17 @@
 
     /* Index SPECS */
 
+    #featured {
+        text-align: left;
+        margin-left: 1rem;
+    }
 
     .header_hamburger {
         right: 2rem !important;  
     }
 
     main {
-        margin: 1rem auto;
+        margin: 1rem auto 2.5rem;
     }
 
     .burger {
@@ -23,8 +27,8 @@
     }
 
     #banner, #banner_img {
-        width: 93vw;
-        height: 50vh;
+        width: 45rem;
+        height: 45rem;
         margin: auto;
         position: relative;
     }
