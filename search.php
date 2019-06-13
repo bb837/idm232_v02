@@ -117,8 +117,9 @@
             die("Database connection failed.");
           }
           elseif (mysqli_num_rows($result) == 0) {
+              print_r("nope");
               ?>
-            <h2 id="no_result">Sorry! Nothing seems to match the search.</h2>;
+            <h2 id="no_result">Sorry! Nothing seems to match the search.</h2>
             <?php
           }
           else {
@@ -132,11 +133,6 @@
 
        </div> 
         </div>
-     
-        <!-- <h2 id="results_num"></h2> -->
-
-        <!-- <h2 id="search_help">Search for a recipe, special ingredient or cuisine!</h2> -->
-        <!-- <h2 id="no_result">Sorry! Nothing seems to match the search.</h2> -->
     </main>
 
     <?php

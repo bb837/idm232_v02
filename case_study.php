@@ -67,7 +67,18 @@
               <p>At first, this project was quite intimidating and I didn’t exactly know how to start as I had only started coding basic HTML and CSS less than nine months before this project.</p>
             <p>I collaborated with Erik Martus (put link around name) on creating our MySQL database. We spent the majority of the term perfecting the database so that working in PHP would be that much easier. Picking up PHP was much easier than JavaScript, and a lot less blood, sweat and tears went into building this project. The portion that I was most excited to get working was the dynamic building of content because seeing it working after hand coding similar things in the past was magic. Using only fifty-one lines of code, including white spaces for legibility, to create a page with forty recipe entries when it would have taken hundreds in pure HTML was art.</p>  
             </section>
-    
+
+            <section id="product">
+                <h5>The Final Product</h5>
+                <p>It is a web application that references and MySQL database through PHP and dynamically builds out the page’s content. Feel free to check out the live version the site and see for yourself just how it works.</p>
+
+
+            </section>
+                
+            <section id="case-future">
+                <h5>In The Future</h5>
+                <p>I intend to revisit this in the future and I plan to bring back those educational aspects I took out for this project.</p>
+            </section>
 
 
     </main>

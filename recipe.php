@@ -45,6 +45,12 @@
                 <h3><?php echo $recipe["title"] ?></h3>
                 <h6>with <?php echo $recipe["side"] ?></h6>
 
+                    <div id="serving-container">
+                      <div class="info"><?php echo $recipe["time"] ?> Minutes</div>
+                      <div class="info"><?php echo $recipe["servings"] ?> Servings</div>
+                      <div class="info"><?php echo $recipe["nutrition"] ?> Cals.</div>
+                    </div>
+                    
                 <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["hero_image"] ?>" alt="placeholder">
                 <p id="recipe_des">
 
@@ -55,7 +61,7 @@
             <div id="ingredients">
                 <h4 class="h4_blue">Ingredients</h4>
 
-                <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="placeholder">
+                <img class="recipe_img ing-img" src="images/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="placeholder">
 
 
                 <h6 id="ing_list">
@@ -64,12 +70,14 @@
               $ings = explode(";", $recipe["ingredients"]);
               foreach ($ings as $ing) {
                 ?>
-                  <li><?php echo $ing ?></li> 
+                  <li class="ing-li"><?php echo $ing ?></li> 
                 <?php
               }
             ?>
                 </ul>
             </h6>
+
+
 
             </div>
 

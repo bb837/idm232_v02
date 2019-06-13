@@ -59,6 +59,14 @@
         width: 18rem;
     } */
 
+    input {
+        padding: .4rem 57.6rem .4rem 2.2rem;
+    }
+
+    #submit {
+        right: -72rem;
+    }
+
     #load_screen {
         background-position-x: 0;
     }
@@ -108,4 +116,10 @@
          width: 100%;
          align-self: center;
      }
+
+     .recipe_img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
 }

@@ -49,7 +49,7 @@ h3 {
     font-weight: 700;
     font-style: normal;
     font-size: 1.5rem;
-    margin: 1rem auto 0;
+    margin: 1rem auto 1rem
 }
 
 h4 {
@@ -145,6 +145,7 @@ body {
     position: relative;
     bottom: -23rem;
     margin: 0 auto;
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
 }
 
 /* menu */
@@ -163,7 +164,7 @@ body {
 }
 
 #submit {
-    right: -11rem;
+    right: -16rem;
     background: url("../img/search.png");
     background-size: 2rem;
     height: 2rem;
@@ -227,7 +228,6 @@ body {
     /* Have the font not be bold */
     font: bold 3rem 'futura', sans-serif;
     color: #fff;
-    top: .5rem;
     right: 1rem;
     padding: .5rem 1rem;
     z-index: 80;
@@ -335,12 +335,9 @@ img {
     font-size: 2rem;
     display: block;
     color: #707070;
+    text-align: center;
 
 }
-
-
-
-
 
 /*     SEARCH SPECS       */
 
@@ -365,10 +362,11 @@ input {
     margin: 0 auto;
 	background: #fff url(#) no-repeat .5625rem center;
 	border: none;
-	padding: .4rem .75rem .4rem .5rem;
+	/* padding: .4rem .75rem .4rem .5rem; */
 	width: 13rem;
-	border-radius: 10em;
-	
+    border-radius: 10em;
+    padding: .4rem 1.3rem .4rem 2.2rem;
+
 	transition: all .5s;
 }
 
@@ -380,13 +378,13 @@ input::placeholder {
     opacity: .3;
 }
 
-input:focus, input:active {
-	/* width: 100%; */
+/* input:active {
+	width: 100%;
 	background-color: #fff;
 	border-color: #fff;
     box-shadow: 0 0 .625rem rgba(255,255,255,.5);
     padding: .4rem 3.6rem .4rem 2.2rem;
-}
+} */
 
 #filter_img {
     width: 2rem;
@@ -497,7 +495,7 @@ footer {
     width: 17rem;
     height: 6.25rem;
     z-index: 30;
-    text-shadow: 1px 1px 3px #454A44;
+    text-shadow: 1px 1px 6px #313431;
 }
 
 #banner_heart {
@@ -660,3 +658,22 @@ main {
   .hidden {
       display: none !important
   }
+
+  .ing-img {
+    box-shadow: none;
+  }
+
+  .ing-li {
+      list-style-type: none;
+  }
+
+  #serving-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: .5rem auto 1.4rem;
+    width: 40%;
+}
+
+.info {
+    border-bottom: .125rem solid #0ddfcd;
+}

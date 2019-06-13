@@ -6,11 +6,11 @@
 
     $query = "SELECT id, title, side, hero_image ";
     $query .= "FROM recipes ";
-    $query .= "ORDER by id ASC";
+    // $query .= "ORDER by id ASC";
     $result = mysqli_query($connection, $query);
-    // if (!$result) {
-    //   die("Database connection failed.");
-    // }
+    if (!$result) {
+      die("Database connection failed.");
+    }
     $bannerImg = rand(1, 40);
 
     $query_banner = "SELECT id, title, side, hero_image ";
