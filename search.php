@@ -1,7 +1,7 @@
 <?php
     require_once "includes/_db.php";
     require_once "includes/functions.php";
-    require_once "includes/_desktop-header.php";
+    require_once "includes/_search-header.php";
 
     $search_result = isset($_GET["search"]) ? $_GET["search"] : null;
 ?>

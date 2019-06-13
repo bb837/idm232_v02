@@ -4,7 +4,6 @@
     require_once "includes/menu-include.php";
     require_once "includes/_head.php";
 
-
     $query = "SELECT id, title, side, hero_image ";
     $query .= "FROM recipes ";
     $query .= "ORDER by id ASC";
@@ -14,11 +13,6 @@
     }
 
     $random_id = randomNumber(1, 40, 40);
-
-    // $bannerImg = rand(1, 40);
-    // print_r($bannerImg);
-
-
     ?>
 
 <!DOCTYPE html>
@@ -41,13 +35,10 @@
   <main id="home_container">
 
   <?php
-
   while($recipe = mysqli_fetch_assoc($result)) {
   include "includes/index_item.php";
-
   } // end while
   mysqli_free_result($result);
-
   ?>
 
 </main>
@@ -55,7 +46,5 @@
 require_once "includes/_footer.php";
   ?>  
 </body>
-
 <script src="js/navigation.js"></script>
-
 </html>

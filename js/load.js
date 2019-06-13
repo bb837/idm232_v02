@@ -5,19 +5,19 @@ function getStarted(){
   }
   document.getElementById("get_started").addEventListener("click",getStarted, false);
 
-// PROMISE
+// Local Storage
 const introElement = document.getElementById('load_screen');
-const promiseEvents = new Promise(function(resolve, reject) {
-  if (introElement.classList.contains('load_screen')) {
-    window.setTimeout(function() {
-      resolve();
-    }, 4000);
-  }
-});
+const introWatched = localStorage.getItem('introWatched');
 
-promiseEvents.then(function() {
-  getStarted();
-})
+if (introWatched === 'true') 
+{
+  console.log(introElement);
+  document.body.removeChild(introElement);
 
-// TUTORIAL
+  console.log('Intro Played');
+}
+
+localStorage.setItem('introWatched','true');
+
+console.log(introWatched);
 
