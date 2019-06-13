@@ -1,29 +1,28 @@
-/*        TABLET          */
-
 @media screen and (min-width: 48rem) {
-    /* LOAD SCREEN */
-#load_screen {
-    background-position-y: 0;
-    background-size: cover;
-}
 
-    /* Index SPECS */
-
-    #featured {
-        text-align: left;
-        margin-left: 1rem;
+    /*  CONTENT    */
+    main {
+        margin: 1rem auto 2.5rem;
     }
 
     .header_hamburger {
         right: 2rem !important;  
     }
 
-    main {
-        margin: 1rem auto 2.5rem;
-    }
-
     .burger {
         width: 1.95rem;
+    }
+
+    /* LOAD SCREEN */
+    #load_screen {
+    background-position-y: 0;
+    background-size: cover;
+    }
+
+    /* Index SPECS */
+    #featured {
+        text-align: left;
+        margin-left: 1rem;
     }
 
     #banner, #banner_img {
@@ -39,7 +38,6 @@
         justify-items: center;
     }
 
-
     #banner_cap {
         top: -8rem;
     }
@@ -51,32 +49,15 @@
     }
     
     /* Search SPECS */
-    
     #search_container {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-items: center;
      }
-     
-    /* #search-bar:focus, #search-bar:active {
-        padding: .4rem 15rem .4rem 2.2rem;
-    } */
-
-    /* #search-bar:focus, #search-bar:active {
-        width: 55%;
-        background-color: #fff;
-        border-color: #fff;
-        box-shadow: 0 0 .625rem rgba(255,255,255,.5);
-        padding: .4rem 3.6rem .4rem 2.2rem;
-    } */
 
     #search-bar {
         padding: .4rem 26rem .4rem 2.2rem;
     }
-
-    /* #submit {
-        right: -41rem;
-    } */
 
     #wordmark_logo {
         width: 13.125rem;
@@ -85,7 +66,6 @@
     }
 
     /* Recipe SPECS */
-
      #recipe_container {
          width: 75%;
      }

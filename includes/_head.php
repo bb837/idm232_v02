@@ -1,5 +1,4 @@
 <header id="recipe_header">
-<div id="header_wrap">
     <a id="top" href="index.php">
         <svg id="absolute-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 228.722 228.722">
         <defs>
@@ -55,5 +54,4 @@
             <span class="burger"></span>
         </button>
         <button id="closebtn" class="hidden">&times;</button>
-</div>
 </header>

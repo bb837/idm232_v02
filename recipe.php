@@ -38,9 +38,7 @@
 
 <body>
     <main id="top">
-
         <div id="recipe_container">
-
             <div id="recipe_info">
                 <h3><?php echo $recipe["title"] ?></h3>
                 <h6>with <?php echo $recipe["side"] ?></h6>
@@ -51,52 +49,42 @@
                       <div class="info"><?php echo $recipe["nutrition"] ?> Cals.</div>
                     </div>
                     
-                <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["hero_image"] ?>" alt="placeholder">
+                <img class="recipe_img" src="images/<?php echo $id . "/" . $recipe["hero_image"] ?>" alt="<?php echo $recipe["title"] ?>">
                 <p id="recipe_des">
 
                 <?php echo $recipe["description"] ?>
                 </p>
             </div>
 
-            <div id="ingredients">
-                <h4 class="h4_blue">Ingredients</h4>
+        <div id="ingredients">
+            <h4 class="h4_blue">Ingredients</h4>
 
-                <img class="recipe_img ing-img" src="images/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="placeholder">
+              <img class="recipe_img ing-img" src="images/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="ingredients">
 
-
-                <h6 id="ing_list">
-                    <ul>
-                <?php
-              $ings = explode(";", $recipe["ingredients"]);
-              foreach ($ings as $ing) {
-                ?>
-                  <li class="ing-li"><?php echo $ing ?></li> 
-                <?php
-              }
-            ?>
-                </ul>
+            <h6 id="ing_list">
+                <ul>
+                    <?php
+                  $ings = explode(";", $recipe["ingredients"]);
+                  foreach ($ings as $ing) { ?>
+                      <li class="ing-li"><?php echo $ing ?></li> 
+                    <?php } ?>
+                 </ul>
             </h6>
+        </div>
 
+        <div id="kitchen_tools">
+            <h4 class="h4_blue">Kitchen Tools</h4>
 
+                <img class="recipe_img" src="images/kitchen_tools/<?php echo $recipe["tool_img"] ?>" alt="tool image">
 
-            </div>
+            <h2><?php echo $recipe["kitchen_tool"] ?></h2>
+            <p id="tool_des"><?php echo $recipe["kitchen_tool_desc"]?></p>
+        </div>
 
-            <div id="kitchen_tools">
-                <h4 class="h4_blue">Kitchen Tools</h4>
+        <div id="step_container">
+            <h4 class="h4_blue">Let's Cook!</h4>
 
-                <img class="recipe_img" src="images/kitchen_tools/<?php echo $recipe["tool_img"] ?>" alt="placeholder">
-
-                <h2><?php echo $recipe["kitchen_tool"] ?></h2>
-                <p id="tool_des">
-                <?php echo $recipe["kitchen_tool_desc"] ?>
-                </p>
-            </div>
-
-            <div id="step_container">
-
-                <h4 class="h4_blue">Let's Cook!</h4>
-
-                <?php 
+            <?php 
               $steps = explode("]\[", $recipe["steps"]);
               $step_img_high = explode("\\", $recipe["step_img_high"]);
 
@@ -112,31 +100,28 @@
                     $step = rtrim($step, ']');
                   }
                   $step_exp = explode("|", $step);
-                ?>
-                  <div class="steps">
-                    <h5><?php echo $step_exp[0] ?></h5>
-                    <img src="images/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="" class="recipe_img">
-                    <p class="step_pg"><?php echo $step_exp[1] ?></p>
-                </div>
-                <?php
-                $i++;
-              }
             ?>
-            </div>
-        </div>
-        
-    </main>
-            <footer>
-            <a id="back-to-top" href="#top">Back to Top</a>
-                <!-- back to top? -->
-            </footer>
 
+        <div class="steps">
+          <h5><?php echo $step_exp[0] ?></h5>
+              <img src="images/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="<?php echo $step_exp[0] ?>" class="recipe_img">
+          <p class="step_pg"><?php echo $step_exp[1] ?></p>
+        </div>
+            <?php
+            $i++;
+          }?>
+        </div>
+      </div>   
+    </main>
+
+    <footer>
+      <a id="back-to-top" href="#top">Back to Top</a>
+    </footer>
 </body>
 
 <script src="js/navigation.js"></script>
 </html>
 <?php
-  } // end while
+  }
   mysqli_free_result($result);
-
 ?>

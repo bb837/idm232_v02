@@ -28,20 +28,22 @@
     <link rel="stylesheet" href="css/master_desktop.css">
     <title>All Recipes</title>
 </head>
-<body id="allrecipes_body">
-  <div id="work">
-    <h1 id="all-recipes-title">All Recipes</h1>
-  </div>
-  <main id="home_container">
 
+<!-- MAIN CONTAINER WITH ALL RECIPES -->
+<body id="allrecipes_body">
+    <div id="work">
+        <h1 id="all-recipes-title">All Recipes</h1>
+    </div>
+
+<main id="home_container">
   <?php
   while($recipe = mysqli_fetch_assoc($result)) {
   include "includes/index_item.php";
-  } // end while
+  }
   mysqli_free_result($result);
   ?>
-
 </main>
+
 <?php
 require_once "includes/_footer.php";
   ?>  

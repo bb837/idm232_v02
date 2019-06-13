@@ -1,4 +1,4 @@
-<a class="link" href="<?php 
+<a class="link" target="_blank" href="<?php 
               $rec_url = rawurldecode("recipe.php");
               $rec_url .= "?" . "id=" . urldecode($recipe["id"]);
               echo htmlspecialchars($rec_url);?>">

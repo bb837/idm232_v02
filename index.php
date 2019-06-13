@@ -6,7 +6,6 @@
 
     $query = "SELECT id, title, side, hero_image ";
     $query .= "FROM recipes ";
-    // $query .= "ORDER by id ASC";
     $result = mysqli_query($connection, $query);
     if (!$result) {
       die("Database connection failed.");
@@ -22,9 +21,6 @@
     }
 
     $random_id = randomNumber(1, 40, 18);
-
-
-    // print_r($bannerImg);
 
     while($recipe = mysqli_fetch_assoc($result)) {
     ?>
@@ -44,7 +40,7 @@
 </head>
 
 <body>
-    <!-- Have button appear after load is completed -->
+    <!-- LOAD SCREEN: ON FIRST TIME VISIT-->
      <div id="load_screen">
 
         <object id="logo" data="img/logo.svg" type="image/svg+xml">
@@ -53,7 +49,8 @@
 
         <button id="get_started">Let's Get Started</button>
     </div>
-
+    
+    <!-- HEADER W/ FEATURED BANNER ITEM, RANDOMLY GENERATED -->
     <header id="top">
         <?php
 
@@ -79,9 +76,9 @@
         <?php
             }
          ?>
-
     </header>
 
+    <!-- MAIN CONTAINER WITH RANDOMLY GENERATED RECIPES -->
     <main>
        <h3 id="featured">Featured Recipes</h3>
        <div id="home_container">
@@ -96,6 +93,7 @@
 require_once "includes/_footer.php";
   ?> 
 </body>
+
 <script src="js/load.js"></script>
 <script src="js/navigation.js"></script>
 </html>
