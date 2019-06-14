@@ -84,4 +84,8 @@
     #case-hero {
         height: 60vh;
     }
+
+    .card {
+        width: 30rem;
+    }
 }

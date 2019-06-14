@@ -743,12 +743,24 @@ main {
 .card {
     position: relative;
     width: 20rem;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 1.25rem;
-    height: 65vh;
-    margin: auto auto;
-    top: 2rem;
-    text-align: center
+    /* height: 65vh; */
+    margin: auto auto 1.5rem;
+    /* top: 2rem; */
+    text-align: left;
+}
+
+.card h4, .card h3 {
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: .5rem;
+}
+
+.card:last-of-type {
+    margin-bottom: 2rem;
 }
 
 #help {

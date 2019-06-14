@@ -80,7 +80,34 @@
 
     <!-- MAIN CONTAINER WITH RANDOMLY GENERATED RECIPES -->
     <main>
+       <div class="card">
+            <h4 class="h4_blue">Welcome!</h4>
+            <h3 class="h4_blue">See what's inside Let's Cook!</h3>
+
+            <h5>Delicious, Chef-Designed</h5>
+            <p>With step-by-step instructions so you never miss a beat (or beet)</p>
+
+            <h5>Perfectly-portioned amounts</h5>
+            <p>So no morsels or dollops go to waste</p>
+
+            <h5>We Encourage Quality Ingredients</h5>
+            <p>Like fresh produce, sustainable seafood and exclusive spice blends</p>
+        </div>
+
+        <div class="card">
+        <h4 class="h4_blue">How to Use Let's Cook!</h4>
+            <h3>Choose Your Meals</h3>
+            <p>Our chef-designed recipes include balanced meals from all cultures, quick one-pan dinners, and top-rated customer favorites.</p>
+
+            <p>Search through our library to find delicious meals.
+                Or try our filters!
+            </p>
+        <h3>Create Magic</h3>
+            <p>Following our step-by-step instructions you’ll experience the magic of cooking recipes that our chefs create with your family’s tastes in mind.</p>
+        </div>
+
        <h3 id="featured">Featured Recipes</h3>
+
        <div id="home_container">
 
            <?php
