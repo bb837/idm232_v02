@@ -813,7 +813,9 @@ iframe {
 }
 
 #xd {
-    height: 38rem;
+    height: 667px;
+    box-shadow: 0 .0625rem .1875rem -.0625rem #454a44;
+    width: 375px;
 }
 
 .section-head {

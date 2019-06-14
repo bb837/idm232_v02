@@ -112,7 +112,11 @@
         order: 3;
     }
 
-    #challenge {
+    #challenge, #overview {
         display: block;
+    }
+
+    #youtube {
+        top: 20rem;
     }
 }

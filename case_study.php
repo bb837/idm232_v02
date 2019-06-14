@@ -24,7 +24,7 @@
     
         <section id="overview" class="case-section">
             <h5 class="section-head">Overview</h5>
-            <p>2 paragraphs: some of the main take aways</p>
+            <p>“Let’s Cook” is an online cookbook that began as an idea a little over a year ago. It has gone through three iterations for three different classes, beginning as a concept for a learning app about cooking for the first two versions before evolving into this cookbook. It is designed to be friendly to all ages with personable flavor text, bright colors, and an overall playful experience. It is a MySQL database driven site that is dynamically built using PHP templates.s</p>
         </section>
     
         <section id="challenge" class="case-section">
@@ -50,59 +50,10 @@
                 <p>The core of the designs came from an idea I have been working with for a little over a year. For an earlier class (University 101 at Drexel University) I was tasked to create a UI of my choice, and since I am passionate about cooking, I chose to create a cooking app called “Let’s Cook”. What was different and special about this app was that it was for learning to cook and not just looking up and using recipes because not a lot of people know how to take that first step to cook delicious food. Looking back at it, it looked horrible but it has grown to become the foundations of this project. From “Let’s Cook” I pulled branding, a base color scheme, and a general feel for the application. </p>
             </div>
 
-            <div class="img-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 228.722 228.722">
-                <defs>
-                    <style>
-                    .cls-1 {
-                        fill: #0ddfca;
-                    }
-    
-                    .cls-2, .cls-3, .cls-4 {
-                        fill: #fff;
-                        font-family: 'beauty_and_the_dutchregular';
-                        letter-spacing: 0.1em;
-                    }
-    
-                    .cls-2 {
-                        font-size: 58px;
-                    }
-    
-                    .cls-3 {
-                        font-size: 61px;
-                    }
-    
-                    .cls-4 {
-                        font-size: 55px;
-                    }
-    
-                    .cls-5 {
-                        filter: url(#Ellipse_1);
-                    }
-                    </style>
-                    <filter id="Ellipse_1" x="0" y="0" width="228.722" height="228.722" filterUnits="userSpaceOnUse">
-                    <feOffset dy="3" input="SourceAlpha"/>
-                    <feGaussianBlur stdDeviation="3" result="blur"/>
-                    <feFlood flood-opacity="0.161"/>
-                    <feComposite operator="in" in2="blur"/>
-                    <feComposite in="SourceGraphic"/>
-                    </filter>
-                </defs>
-                <g id="logo" transform="translate(522 -704.576)">
-                    <g class="cls-5" transform="matrix(1, 0, 0, 1, -522, 704.58)">
-                    <circle id="Ellipse_1-2" data-name="Ellipse 1" class="cls-1" cx="105.361" cy="105.361" r="105.361" transform="translate(9 6)"/>
-                    </g>
-                    <text id="Let_s" data-name="Let&apos;s" class="cls-2" transform="translate(-480.855 751.533) rotate(-11)"><tspan x="0" y="61">Let&apos;s</tspan></text>
-                    <text id="Cook" class="cls-3" transform="translate(-487.571 817.878) rotate(-11)"><tspan x="0" y="65">Cook</tspan></text>
-                    <text id="_" data-name="!" class="cls-4" transform="translate(-359.161 790.408) rotate(-16)"><tspan x="0" y="58">!</tspan></text>
-                </g>
-                </svg>
-    
-                <div class="frame-container">            
+            </div> 
+                <div id="youtube" class="frame-container">            
                     <iframe  src="https://www.youtube.com/embed/av7T21bLMhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-            </div>
-
 
             <!-- width="560" height="315" -->
             <div class="text-wrap">
@@ -124,9 +75,13 @@
                     </div>
 
                     <div class="text-wrap"> 
-                        <a class="link" href="https://xd.adobe.com/view/6af0f301-320b-455a-5c1e-0bd29797bea4-1cc1/" target="_blank">View in a Separate Tab Here</a>
+
                         
                         <p>Above is my low and mid fidelity prototype. I have made some UI changes because of the new skills I had in PHP.</p>
+
+                        <p>With the new skills obtained through PHP. I have used the styling of the home index cards throughout the entire UI. The consistency makes it easier for the user to understand the interface.</p>
+
+                        <a class="link" href="https://xd.adobe.com/view/6af0f301-320b-455a-5c1e-0bd29797bea4-1cc1/" target="_blank">View The Prototype In A Separate Tab Here</a>
                     </div>
             </section>
 
