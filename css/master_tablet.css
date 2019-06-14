@@ -88,4 +88,13 @@
     .card {
         width: 30rem;
     }
+
+    #filter_drop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .radio {
+        left: 6rem;
+      }
 }

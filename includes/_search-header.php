@@ -7,7 +7,7 @@
                         .cls-1 {
                             fill: #f5f5f5;
                             font-size: 29px;
-                            font-family: Beauty and the Dutch;
+                            font-family: 'beauty_and_the_dutchregular';
                             letter-spacing: 0.093em;
                         }
                         </style>

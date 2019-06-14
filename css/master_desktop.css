@@ -124,3 +124,19 @@
         height: 80vh;
     }
 }
+
+@media screen and (min-width: 120rem) {
+    #submit {
+        right: 1.8rem;
+    }
+
+    #search-bar {
+        padding: .4rem 96rem .4rem 2.2rem;
+    }
+
+    #filter_drop {
+
+        width: 50vw;
+        margin: 0 auto;
+      }
+}
