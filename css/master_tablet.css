@@ -80,4 +80,8 @@
         width: 80%;
         margin: .5rem auto;
     }
+
+    #case-hero {
+        height: 60vh;
+    }
 }

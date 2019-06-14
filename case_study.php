@@ -19,7 +19,7 @@
     <title>Case Study</title>
 </head>
 <body id="top">
-    <img id="case-hero" src="https://via.placeholder.com/1280x900" alt="placeholder">
+    <img id="case-hero" src="img/hero-img-lg.png" alt="home site">
     <main>
     
         <section id="overview" class="case-section">
@@ -101,8 +101,9 @@
             <section id="product" class="case-section">
                 <h5 class="section-head">The Final Product</h5>
                 <p>It is a web application that references and MySQL database through PHP and dynamically builds out the page’s content. Feel free to check out the live version the site and see for yourself just how it works.</p>
-
-                <h2>put some darn images</h2>
+                    <div class="img-wrap">
+                    <img src="img/mobile-home.png" alt="tablet">      
+                    </div>
             </section>
                 
             <section id="case-future" class="case-section">
